@@ -1,0 +1,29 @@
+package GsonActivity;
+
+import org.json.JSONObject;
+import com.google.gson.Gson;
+
+public class GsonActivity {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		JSONObject jsonObject ;
+	
+		String registerMachine = "{\"username\":\"Martin@corestar.com.tw\",\"password\":\"Aaa123456\",\"form\":{\"machinePhysicalId\":\"2020111900024\",\"isAutoUpdateFw\":true,\"isAutoUpdateConsoleSw\":true}}";
+        
+		jsonObject = new JSONObject(registerMachine);
+		
+		GsonData gsonData = new GsonData();
+		
+		Gson gson = new Gson();
+		
+		gson.fromJson(String.valueOf(jsonObject), gsonData);
+		
+		
+		
+		
+		
+	}
+
+}
